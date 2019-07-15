@@ -1,5 +1,4 @@
 #include <Arduino.h>
-
 #include <PacketSerial.h>   // COBS packet serial library
 
 /* Program specific headers */

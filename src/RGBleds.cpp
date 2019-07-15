@@ -25,11 +25,10 @@ void rgbSetup() {
 // For testing, this function will update the RGB leds to a gradient pattern down the stip of LEDs
 // Call rgbUpdate at whatever rate you want the LEDs to cycle through colors.
 void rgbUpdate() {
-    int x, y;
+    int x;
     const uint8_t phaseShift = 10;
     for (x=0; x < ledsPerStrip; x++) {
     int index = (color + x + phaseShift/2) % 180;
-    // leds.setPixel(x, rainbowColors[1]);
     leds.setPixel(x, rainbowColors[index]);
     }
     leds.show();
