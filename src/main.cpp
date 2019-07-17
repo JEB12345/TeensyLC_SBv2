@@ -19,6 +19,9 @@ extern timer_data timer_state;
 const int ledPin =  LED_BUILTIN;// the number of the LED pin
 uint8_t ledState = LOW;
 
+// Manually boot BMS Chip, used for Debug purposes only
+// #define SELF_START
+
 #define BMS_ALERT_PIN 16      // attached to interrupt INT0
 #ifdef SELF_START
 #define BMS_BOOT_PIN 17       // Boots the bq76930 when begin is called

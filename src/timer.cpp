@@ -1,13 +1,13 @@
 #include <Arduino.h>
 #include "timer.h"
 
-IntervalTimer milliLoop;       // Non-interupt loop for timing in milliseconds
-timer_data timer_state;     // Must call this as extern in main file
+IntervalTimer mainLoop;      // Interupt driven library for timing in microseconds
+timer_data timer_state;       // Must call this as extern in main file
 
- void timer_init() {
-     // Setup the main 10ms loop timer
-     milliLoop.begin(mainTimer, 10000);
- }
+void timer_init() {
+    // Setup the main 10ms loop timer
+    mainLoop.begin(mainTimer, 10000);
+}
 
  // Timer update loop
 void mainTimer() {
